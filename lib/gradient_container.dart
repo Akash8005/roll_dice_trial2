@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:roll_dice_trial2/styled_text.dart';
+import 'package:roll_dice_trial2/roll_dice.dart';
+
+// import 'package:roll_dice_trial2/styled_text.dart';
 
 var startAlignment = Alignment.topLeft;
 var endAlignment = Alignment.bottomRight;
@@ -8,6 +10,7 @@ class GradientContainer extends StatelessWidget {
   const GradientContainer(this.color1, this.color2, {super.key});
   final Color color1;
   final Color color2;
+
   @override
   Widget build(context) {
     return Container(
@@ -21,10 +24,8 @@ class GradientContainer extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: const Center(
-        child: StyledText(
-          "Achyutham Keshavam, Krishna Damodaram, ram narayanam, janaki vallabham",
-        ),
+      child: Center(
+        child: RollDice(),
       ),
     );
   }
