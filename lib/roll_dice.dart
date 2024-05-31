@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:roll_dice_trial2/styled_text.dart';
+import 'dart:math';
 
 class RollDice extends StatefulWidget {
   @override
@@ -9,11 +10,13 @@ class RollDice extends StatefulWidget {
 }
 
 class _RollDiceState extends State<RollDice> {
-  var currentState = "assets/images/dice-6.png";
+  var currentState = "assets/images/dice-1.png";
+
   void rollDice() {
     //...
+    var randomizer = Random().nextInt(6) + 1;
     setState(() {
-      currentState = "assets/images/dice-3.png";
+      currentState = "assets/images/dice-$randomizer.png";
     });
   }
 
