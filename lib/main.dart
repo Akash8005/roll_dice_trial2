@@ -1,24 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:roll_dice_trial2/gradient_container.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.blue,
-                Colors.green,
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: const Center(
-            child: Text("Om Namah Shiavay"),
-          ),
-        ),
+        body: GradientContainer(Colors.green, Colors.blue),
       ),
     ),
   );
